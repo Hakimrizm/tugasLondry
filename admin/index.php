@@ -21,7 +21,10 @@ $pelanggan = query("SELECT * FROM pelanggan LIMIT $awalData, $jumlahDataPerHalam
 
 // Tombol ditekan
 if ( isset($_POST["cari"]) ){
+
   $pelanggan = cari($_POST["keyword"]);
+
+
 }
 
 ?>
@@ -43,11 +46,25 @@ if ( isset($_POST["cari"]) ){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dongle:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/font.css">
+    
+    <!-- My Css -->
+    <!-- <link rel="stylesheet" href="../css/font.css"> -->
+    <style>
+        body {
+        font-family: "Nunito Sans", sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .navbar-brand {
+        font-family: "Shadows Into Light", cursive;
+      }
+
+    </style>
 
     <title>Halaman Admin</title>
   </head>
   <body>
+
 
     <!-- Membuat Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm mb-3" style="background-color: #0DB8DE;">
@@ -58,7 +75,7 @@ if ( isset($_POST["cari"]) ){
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
@@ -144,7 +161,7 @@ if ( isset($_POST["cari"]) ){
         </li>
         <?php for( $i = 1; $i <= $jumlahHalaman; $i++ ): ?>
           <?php if( $i == $halamanAktif ) : ?>
-          <li class="page-item active shadow-sm" aria-current="page"><a href="?page=<?= $i; ?>"  class="page-link"><?= $i; ?></a></li>
+            <li class="page-item active shadow-sm" aria-current="page"><a href="?page=<?= $i; ?>"  class="page-link"><?= $i; ?></a></li>
           <?php else : ?>
             <li class="page-item shadow-sm"><a href="?page=<?= $i; ?>"  class="page-link"><?= $i; ?></a></li>
             <?php endif; ?>
