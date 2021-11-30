@@ -74,6 +74,12 @@ if ( isset($_POST["login"]) ){
 
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        html,body{
+            background-color: #0D1117 !important;
+        }
+    </style>
+
     <title>Hello, world!</title>
   </head>
   <body>
