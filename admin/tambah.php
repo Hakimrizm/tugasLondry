@@ -37,6 +37,12 @@ if ( isset($_POST["submit"]) ){
 
   <link rel="stylesheet" href="../css/style2.css">
 
+  <style>
+    body{
+      background-color: #0D1117 !important;
+    }
+  </style>
+
   <title>Tambah Data Pelanggan</title>
 </head>
 <body>
