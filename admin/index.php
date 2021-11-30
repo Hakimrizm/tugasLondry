@@ -52,7 +52,7 @@ if ( isset($_POST["cari"]) ){
     <style>
         body {
         font-family: "Nunito Sans", sans-serif;
-        background-color: #f0f0f0;
+        background-color: #0D1117;
       }
 
       .navbar-brand {
@@ -67,7 +67,7 @@ if ( isset($_POST["cari"]) ){
 
 
     <!-- Membuat Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm mb-3" style="background-color: #0DB8DE;">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm mb-3" style="background-color: #161B22;">
       <div class="container">
         <a class="navbar-brand" href="#">LONDRY SMKN7</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,8 +119,8 @@ if ( isset($_POST["cari"]) ){
 
       <div class="panel-body">
         <div id="live">
-          <table class="table table table-hover shadow-sm">
-            <thead class="table-light" style="background-color: #e2edff;">
+          <table class="table table table-hover shadow-sm table-dark">
+            <thead class="table-dark" style="background-color: #e2edff;">
                 <tr>
                   <th>No</th>
                   <th>Nama</th>
@@ -129,7 +129,7 @@ if ( isset($_POST["cari"]) ){
                   <th>Opsi</th>
                 </tr>
             </thead>
-            <tbody style="background-color: white;">
+            <tbody>
             <?php $i = 1; ?>
               <?php foreach ( $pelanggan as $row ): ?>
               <tr>
